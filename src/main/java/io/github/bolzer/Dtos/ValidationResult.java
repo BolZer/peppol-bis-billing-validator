@@ -21,9 +21,9 @@ public final class ValidationResult {
         @NonNull String xmlReport,
         @NonNull List<FailedAssert> errors
     ) {
-        this.report = report;
+        this.report = report.clone();
         this.xmlReport = xmlReport;
-        this.errors = errors;
+        this.errors = errors.stream().toList();
     }
 
     public boolean isValid() {
@@ -31,7 +31,7 @@ public final class ValidationResult {
     }
 
     public @NonNull SchematronOutputType getReport() {
-        return report;
+        return report.clone();
     }
 
     public @NonNull String getXmlReport() {
@@ -39,6 +39,6 @@ public final class ValidationResult {
     }
 
     public @NonNull List<FailedAssert> getErrors() {
-        return errors;
+        return errors.stream().toList();
     }
 }

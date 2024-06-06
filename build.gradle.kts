@@ -36,11 +36,11 @@ dependencies {
 }
 
 group = "io.github.bolzer"
-version = "0.1.0"
+version = "0.1.1"
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
+    sourceCompatibility = JavaVersion.VERSION_19
+    targetCompatibility = JavaVersion.VERSION_19
 }
 
 spotbugs {
