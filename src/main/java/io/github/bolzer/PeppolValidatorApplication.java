@@ -11,9 +11,9 @@ import org.eclipse.microprofile.openapi.annotations.info.License;
         title = "Peppol Validator API",
         version = "0.1.1",
         contact = @Contact(
-            name = "easybill GmbH",
-            url = "https://www.easybill.de",
-            email = "dev@easybill.de"
+            name = "Jan Nöhles",
+            url = "https://github.com/BolZer?tab=repositories",
+            email = "noehles.jan@gmail.com"
         ),
         license = @License(
             name = "MIT",
