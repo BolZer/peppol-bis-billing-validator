@@ -15,10 +15,7 @@ import org.eclipse.microprofile.openapi.annotations.info.License;
             url = "https://github.com/BolZer?tab=repositories",
             email = "noehles.jan@gmail.com"
         ),
-        license = @License(
-            name = "MIT",
-            url = "https://mit-license.org"
-        )
+        license = @License(name = "MIT", url = "https://mit-license.org")
     )
 )
 public final class PeppolValidatorApplication extends Application {}
