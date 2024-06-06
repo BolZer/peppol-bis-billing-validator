@@ -9,15 +9,15 @@ import org.eclipse.microprofile.openapi.annotations.info.License;
 @OpenAPIDefinition(
     info = @Info(
         title = "Peppol Validator API",
-        version = "0.0.1",
+        version = "0.1.1",
         contact = @Contact(
-            name = "Example API Support",
-            url = "http://exampleurl.com/contact",
-            email = "techsupport@example.com"
+            name = "easybill GmbH",
+            url = "https://www.easybill.de",
+            email = "dev@easybill.de"
         ),
         license = @License(
-            name = "Apache 2.0",
-            url = "https://www.apache.org/licenses/LICENSE-2.0.html"
+            name = "MIT",
+            url = "https://mit-license.org"
         )
     )
 )
