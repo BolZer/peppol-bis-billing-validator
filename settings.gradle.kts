@@ -10,4 +10,4 @@ pluginManagement {
         id(quarkusPluginId) version quarkusPluginVersion
     }
 }
-rootProject.name = "peppol-validator"
+rootProject.name = "peppol-bis-billing-validator"
