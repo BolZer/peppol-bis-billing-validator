@@ -29,7 +29,8 @@ class IndexControllerTest {
     }
 
     @ParameterizedTest
-    @ValueSource(strings = {
+    @ValueSource(
+        strings = {
             "Allowance-example.xml",
             "base-creditnote-correction.xml",
             "base-example.xml",
@@ -39,8 +40,9 @@ class IndexControllerTest {
             "vat-category-O.xml",
             "Vat-category-S.xml",
             "vat-category-Z.xml",
-    })
-    void testValidationEndpointWhenInvokedWithPayload(
+        }
+    )
+    void testValidationEndpointWhenInvokedWithValidPeppolXmlPayloads(
         @NonNull String fixtureFileName
     ) throws IOException {
         URL fileContent = Objects.requireNonNull(
@@ -62,5 +64,31 @@ class IndexControllerTest {
             .post("/validation")
             .then()
             .statusCode(200);
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = { "base-example-wrong.xml" })
+    void testValidationEndpointWhenInvokedWithInvalidPeppolXmlPayloads(
+        @NonNull String fixtureFileName
+    ) throws IOException {
+        URL fileContent = Objects.requireNonNull(
+            Thread
+                .currentThread()
+                .getContextClassLoader()
+                .getResource(fixtureFileName)
+        );
+
+        String content = Files.readString(
+            Path.of(fileContent.getFile()),
+            StandardCharsets.UTF_8
+        );
+
+        given()
+            .body(content)
+            .contentType(ContentType.XML)
+            .when()
+            .post("/validation")
+            .then()
+            .statusCode(400);
     }
 }
