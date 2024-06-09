@@ -1,5 +1,5 @@
 # peppol-bis-billing-validator
-[![Generic badge](https://img.shields.io/badge/Version-0.1.2-important.svg)]()
+[![Generic badge](https://img.shields.io/badge/Version-0.1.3-important.svg)]()
 [![Generic badge](https://img.shields.io/badge/License-MIT-blue.svg)]()
 
 ## Introduction
