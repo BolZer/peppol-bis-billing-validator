@@ -12,7 +12,7 @@ import org.eclipse.microprofile.openapi.annotations.info.License;
         version = "0.1.1",
         contact = @Contact(
             name = "Jan Nöhles",
-            url = "https://github.com/BolZer?tab=repositories",
+            url = "https://github.com/BolZer",
             email = "noehles.jan@gmail.com"
         ),
         license = @License(name = "MIT", url = "https://mit-license.org")
