@@ -24,9 +24,9 @@ jobs:
           cache: 'gradle'
 
       - name: Setup Gradle
-        uses: gradle/gradle-build-action@v2.4.2
+        uses: gradle/gradle-build-action@v3
         with:
-          gradle-version: 8.2.1
+          gradle-version: 8.6
 
       - name: Create new buildx builder
         run: docker buildx create --name custom_builder --use
