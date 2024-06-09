@@ -1,0 +1,27 @@
+name: "Spotbugs"
+
+on: [ pull_request ]
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'corretto'
+          java-version: '20'
+          cache: 'gradle'
+
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2.4.2
+        with:
+          gradle-version: 8.2.1
+
+      - name: Main Spotbugs with Gradle Wrapper
+        run: ./gradlew spotbugsMain
+
+      - name: Test Spotbugs with Gradle Wrapper
+        run: ./gradlew spotbugsTest
