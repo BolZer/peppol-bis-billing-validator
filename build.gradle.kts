@@ -25,10 +25,7 @@ dependencies {
     implementation("io.quarkus:quarkus-smallrye-openapi")
     implementation("io.quarkus:quarkus-smallrye-health")
 
-    implementation("org.apache.logging.log4j:log4j-slf4j2-impl:2.23.1")
-    implementation("jakarta.xml.bind:jakarta.xml.bind-api:4.0.2")
     implementation("org.glassfish.jaxb:jaxb-runtime:4.0.5")
-    implementation("net.sf.saxon:Saxon-HE:12.4")
     implementation("com.helger.commons:ph-commons:11.1.6")
     implementation("com.helger.schematron:ph-schematron-api:7.1.0")
     implementation("com.helger.schematron:ph-schematron-xslt:8.0.0")
