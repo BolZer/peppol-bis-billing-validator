@@ -1,3 +1,5 @@
+import org.gradle.kotlin.dsl.internal.sharedruntime.codegen.sourceNameOfBinaryName
+
 plugins {
     java
     id("io.quarkus")
@@ -37,7 +39,7 @@ dependencies {
 }
 
 group = "io.github.bolzer"
-version = "0.1.1"
+version = ""
 
 java {
     sourceCompatibility = JavaVersion.VERSION_19
