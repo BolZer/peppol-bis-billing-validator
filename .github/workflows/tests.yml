@@ -13,7 +13,6 @@ jobs:
     strategy:
       matrix:
         include:
-          - { operating-system: 'ubuntu-latest', java-version: '17' }
           - { operating-system: 'ubuntu-latest', java-version: '19' }
           - { operating-system: 'ubuntu-latest', java-version: '21' }
 
